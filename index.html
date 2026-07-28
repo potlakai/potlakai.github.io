@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pranav Desu · Founder, Nūs</title>
+<meta name="description" content="Pranav Desu. Second-time founder building Nūs, a personal AI that actually knows you. Previously built and exited AiME.">
+<style>
+  :root {
+    --bg: #050505;
+    --fg: #f2f2f2;
+    --dim: #8a8a8a;
+    --line: #1e1e1e;
+    --glow: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  header { padding: 18vh 0 10vh; border-bottom: 1px solid var(--line); }
+  .prompt { color: var(--dim); font-size: 0.9rem; margin-bottom: 1.2rem; }
+  .prompt::before { content: "~ $ "; color: var(--fg); }
+  h1 {
+    font-size: clamp(2.2rem, 7vw, 3.6rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  .cursor {
+    display: inline-block; width: 0.55em; height: 1em;
+    background: var(--glow); margin-left: 6px; vertical-align: -0.1em;
+    animation: blink 1.1s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+  .tagline { margin-top: 1.4rem; font-size: 1.05rem; color: var(--dim); max-width: 46ch; }
+  .tagline strong { color: var(--fg); font-weight: 600; }
+  .loc { margin-top: 2.2rem; font-size: 0.8rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.18em; }
+
+  /* Sections */
+  section { padding: 4.5rem 0; border-bottom: 1px solid var(--line); }
+  h2 {
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.22em;
+    color: var(--dim); margin-bottom: 2rem; font-weight: 600;
+  }
+  h2::before { content: "// "; }
+
+  /* Now */
+  .now-card { border: 1px solid var(--line); padding: 1.8rem; }
+  .now-card h3 { font-size: 1.5rem; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+  .now-card p { color: var(--dim); margin-bottom: 1.1rem; max-width: 56ch; }
+  .now-card p b { color: var(--fg); font-weight: 600; }
+  .install {
+    display: inline-block; border: 1px solid var(--fg);
+    padding: 0.55rem 1rem; font-size: 0.95rem; color: var(--fg);
+    text-decoration: none; transition: background .15s, color .15s;
+  }
+  .install:hover { background: var(--fg); color: var(--bg); }
+  .install::before { content: "$ "; opacity: 0.6; }
+
+  /* Record */
+  .rec { list-style: none; }
+  .rec li {
+    display: grid; grid-template-columns: 7.5rem 1fr; gap: 1.2rem;
+    padding: 1.1rem 0; border-top: 1px solid var(--line);
+  }
+  .rec li:last-child { border-bottom: 1px solid var(--line); }
+  .rec .yr { color: var(--dim); font-size: 0.85rem; padding-top: 0.15rem; }
+  .rec .what b { font-weight: 600; }
+  .rec .what span { color: var(--dim); display: block; font-size: 0.92rem; margin-top: 0.15rem; }
+
+  /* Research */
+  .paper { border-left: 2px solid var(--fg); padding-left: 1.4rem; }
+  .paper h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .paper p { color: var(--dim); font-size: 0.95rem; max-width: 58ch; }
+
+  /* Contact */
+  .links { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+  .links a {
+    color: var(--fg); text-decoration: none; border: 1px solid var(--line);
+    padding: 0.5rem 1rem; font-size: 0.9rem; transition: border-color .15s;
+  }
+  .links a:hover { border-color: var(--fg); }
+
+  footer { padding: 3rem 0 4rem; color: var(--dim); font-size: 0.8rem; border: none; }
+
+  @media (max-width: 540px) {
+    header { padding-top: 12vh; }
+    .rec li { grid-template-columns: 1fr; gap: 0.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="prompt">whoami</div>
+    <h1>Pranav Desu<span class="cursor"></span></h1>
+    <p class="tagline">Second-time founder. I build <strong>AI that knows you</strong>. I sold my first company before turning 20.</p>
+    <div class="loc">Dallas, TX</div>
+  </div>
+</header>
+
+<section id="now">
+  <div class="wrap">
+    <h2>Now</h2>
+    <div class="now-card">
+      <h3>Nūs</h3>
+      <p>A personal AI that holds your context and acts on it, not a chatbot with amnesia. Today it runs your semester: it reads your syllabi and tells you the exact week everything falls apart, <b>before it happens</b>. The end state is the context layer for your whole life, one that teaches you while it assists, because lifestyle can contain business, but business can't contain lifestyle.</p>
+      <a class="install" href="https://github.com/potlakai" target="_blank" rel="noopener">npx create-nus</a>
+    </div>
+  </div>
+</section>
+
+<section id="record">
+  <div class="wrap">
+    <h2>Track record</h2>
+    <ul class="rec">
+      <li>
+        <div class="yr">2023–2025</div>
+        <div class="what"><b>Built and sold AiME</b><span>B2B AI sales agents. Exited for five figures; details under contract. Took it to the Z Fellows interview round: top 10% of applicants, invited to reapply.</span></div>
+      </li>
+      <li>
+        <div class="yr">2024–2025</div>
+        <div class="what"><b>Youngest in UTD's top entrepreneurship class</b><span>Admitted as a freshman by professor approval; mentored by the head of entrepreneurship at UT Dallas. Also ran finance for UTD Raftaar, the #2-ranked Dandiya team in the country, built its automated sponsor-outreach pipeline, and built a national student network through DDN that's given me pitch feedback from students at Brown, Georgia Tech, Rutgers, UNC, and Wharton.</span></div>
+      </li>
+      <li>
+        <div class="yr">2024</div>
+        <div class="what"><b>District pitch champion → nationals</b><span>Won the INCubatoredu district competition against 12 schools; advanced to the national round in Chicago.</span></div>
+      </li>
+      <li>
+        <div class="yr">2020–2023</div>
+        <div class="what"><b>$20K+ bootstrapped from content</b><span>Grew VyingClips to 15K+ subscribers at its peak and ran roughly 15 more channels across platforms for copywriting and affiliate marketing, all built and monetized through high school. Distribution was my first craft; I learned to code second.</span></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <h2>Research</h2>
+    <div class="paper">
+      <h3>Hierarchical Context Compression for Long-Term AI Memory Systems</h3>
+      <p>In progress. How does an AI preserve months of knowledge inside a limited context window? Memory distillation, importance scoring, hierarchical summaries, and semantic compression, benchmarked against raw context, RAG, and the Nūs approach. It's the research problem underneath every AI assistant, and underneath my product.</p>
+    </div>
+  </div>
+</section>
+
+<section id="builds">
+  <div class="wrap">
+    <h2>Things I build for myself</h2>
+    <ul class="rec">
+      <li>
+        <div class="yr">2026</div>
+        <div class="what"><b>Jarvis</b><span>The agent system I run my companies on: persistent memory plus a team of specialized agents that research markets, validate ideas, find leads, and analyze video. Nūs is its public descendant. I was the first user of my own thesis.</span></div>
+      </li>
+      <li>
+        <div class="yr">2024</div>
+        <div class="what"><b>FPL Moneyball bot</b><span>A Python bot for Fantasy Premier League built on the official FPL API: data-driven player selection on xG, xA, and ICT metrics instead of vibes. Side project, but the same instinct as everything above: if a decision repeats, build the system.</span></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="links">
+      <a href="https://github.com/potlakai" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://x.com/pranav_desu" target="_blank" rel="noopener">X</a>
+      <a href="https://www.linkedin.com/in/pranav-desu/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:pranavdesu@gmail.com">Email</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Pranav Desu · built in one file, no trackers.</div>
+</footer>
+
+</body>
+</html>
