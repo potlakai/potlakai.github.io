@@ -1,0 +1,5 @@
+# Internal only. NEVER publish these.
+# HANDOFF.md contains the do-not-name list and the story rules; pushing it
+# would expose exactly the names it exists to keep off the site.
+HANDOFF.md
+DEPLOY.md
